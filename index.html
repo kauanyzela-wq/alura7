@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meus Objetivos do Ano
+Projeto de Vida</title>
+<style>
+:root {
+--cor-de-fundo: #1E1E1E;
+--verde: #6FFF57;
+--branco: #FFFFFF;
+--botao-ativo: #3A375E;
+--botao-inativo: rgba(58, 55, 94, 0.5);
+--texto-fundo: rgba(58, 55, 94, 0.3);
+}
+* {
+box-sizing: border-box;
+}
+
+body {
+background-color: var(--cor-de-fundo);
+color: var(--branco);
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+margin: 0;
+padding: 0;
+}
+
+.conteudo-principal {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+max-width: 1200px;
+width: 100%;
+margin: 0 auto;
+padding: 20px;
+}
+
+.titulo-principal {
+text-align: left;
+width: 100%;
+font-size: 28px;
+margin-bottom: 24px;
+}
+
+.titulo-principal span {
+color: var(--verde);
+}
+
+.botoes {
+display: block;
+width: 100%;
+}
+
+.botao {
+background-color: var(--botao-inativo);
+color: var(--branco);
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 16px;
+font-size: 16px;
+width: 100%;
+border-bottom: 4px solid var(--botao-ativo);
+border-left: 2px solid var(--botao-ativo);
+border-right: 2px solid var(--botao-ativo);
+border-top: none;
+cursor: pointer;
+font-family: inherit;
+transition: background-color 0.2s;
+}
+
+.botao:first-child {
+border-radius: 20px 20px 0 0;
+}
+
+.botao.ativo {
+background-color: var(--botao-ativo);
+border-bottom: 4px solid var(--verde);
+font-weight: bold;
+}
+
+.abas-textos {
+background-color: var(--texto-fundo);
+padding: 32px 20px;
+border-radius: 0 0 20px 20px;
+width: 100%;
+}
+
+.aba-conteudo {
+display: none;
+}
+
+.aba-conteudo.ativo {
+display: block;
+}
+
+.aba-conteudo-titulo-principal {
+font-size: 24px;
+text-align: center;
+margin-top: 0;
+}
+
+.aba-conteudo-titulo-secundario {
+text-align: center;
+color: var(--verde);
+text-transform: uppercase;
+font-size: 14px;
+letter-spacing: 1px;
+margin-bottom: 28px;
+}
+
+.contador {
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+gap: 16px;
+}
+
+.contador-digito {
+background-color: rgba(30, 30, 30, 0.7);
+border: 1px solid var(--botao-ativo);
+border-radius: 12px;
+padding: 16px 20px;
+text-align: center;
+min-width: 105px;
+}
+
+.contador-digito-numero {
+font-size: 42px;
+font-weight: bold;
+margin: 0;
+color: var(--branco);
+}
+
+.contador-digito-texto {
+color: var(--verde);
+font-size: 14px;
+font-weight: bold;
+text-transform: uppercase;
+margin: 6px 0 0 0;
+}
+
+/* Layout responsivo para telas maiores (Desktop) */
+@media screen and (min-width: 768px) {
+.titulo-principal {
+font-size: 32px;
+}
+
+.botoes {
+display: flex;
+}
+
+.botao:first-child {
+border-radius: 20px 0 0 0;
+}
+
+.botao:last-child {
+border-radius: 0 20px 0 0;
+}
+
+.contador-digito {
+min-width: 130px;
+padding: 20px 24px;
+}
+
+.contador-digito-numero {
+font-size: 56px;
+}
+}
+</style>
+</head>
+<body>
+<section class="conteudo-principal">
+<h2 class="titulo-principal">Meus Objetivos do ano<span>_</span></h2>
+
+<div class="conteudo" style="width: 100%;">
+<div class="botoes">
+<button class="botao ativo">Cursos na Alura</button>
+<button class="botao">Criar projetos em JavaScript</button>
+<button class="botao">Criar um portfólio</button>
+<button class="botao">Atualizar meu currículo</button>
+</div>
+
+<div class="abas-textos">
+<!
+-OBJETIVO 1 -->
+<div class="aba-conteudo ativo">
+<h3 class="aba-conteudo-titulo-principal">Estudar 4 cursos na Alura</h3>
+<h4 class="aba-conteudo-titulo-secundario">Tempo para completar o objetivo</h4>
+<div class="contador">
+<div class="contador-digito">
+<p class="contador-digito-numero" id="dias0">0</p>
+<p class="contador-digito-texto">dias</p>
+</div>
+<div class="contador-digito">
+<p class="contador-digito-numero" id="horas0">0</p>
+<p class="contador-digito-texto">horas</p>
+</div>
+<div class="contador-digito">
+<p class="contador-digito-numero" id="min0">0</p>
+<p class="contador-digito-texto">min</p>
+</div>
+<div class="contador-digito">
+<p class="contador-digito-numero" id="seg0">0</p>
+<p class="contador-digito-texto">seg</p>
+</div>
+</div>
+</div>
+<!
+-OBJETIVO 2 -->
+<div class="aba-conteudo">
+<h3 class="aba-conteudo-titulo-principal">Criar 5 projetos em JavaScript</h3>
+<h4 class="aba-conteudo-titulo-secundario">Tempo para completar o objetivo</h4>
+<div class="contador">
+<div class="contador-digito">
+<p class="contador-digito-numero" id="dias1">0</p>
+<p class="contador-digito-texto">dias</p>
+</div>
+<div class="contador-digito">
+<p class="contador-digito-numero" id="horas1">0</p>
+<p class="contador-digito-texto">horas</p>
+</div>
+<div class="contador-digito">
+<p class="contador-digito-numero" id="min1">0</p>
+<p class="contador-digito-texto">min</p>
+</div>
+<div class="contador-digito">
+<p class="contador-digito-numero" id="seg1">0</p>
+<p class="contador-digito-texto">seg</p>
+</div>
+</div>
+</div>
+<!
+-OBJETIVO 3 -->
+<div class="aba-conteudo">
+<h3 class="aba-conteudo-titulo-principal">Criar um portfólio com os meus 3 melhores projetos</h3>
+<h4 class="aba-conteudo-titulo-secundario">Tempo para completar o objetivo</h4>
+<div class="contador">
+<div class="contador-digito">
+<p class="contador-digito-numero" id="dias2">0</p>
+<p class="contador-digito-texto">dias</p>
+</div>
+<div class="contador-digito">
+<p class="contador-digito-numero" id="horas2">0</p>
+<p class="contador-digito-texto">horas</p>
+</div>
+<div class="contador-digito">
+<p class="contador-digito-numero" id="min2">0</p>
+<p class="contador-digito-texto">min</p>
+</div>
+<div class="contador-digito">
+<p class="contador-digito-numero" id="seg2">0</p>
+<p class="contador-digito-texto">seg</p>
+</div>
+</div>
+</div>
+<!
+-OBJETIVO 4 -->
+<div class="aba-conteudo">
+<h3 class="aba-conteudo-titulo-principal">Atualizar meu currículo com os certificados da Alura</h3>
+<h4 class="aba-conteudo-titulo-secundario">Tempo para completar o objetivo</h4>
+<div class="contador">
+<div class="contador-digito">
+<p class="contador-digito-numero" id="dias3">0</p>
+<p class="contador-digito-texto">dias</p>
+</div>
+<div class="contador-digito">
+<p class="contador-digito-numero" id="horas3">0</p>
+<p class="contador-digito-texto">horas</p>
+</div>
+<div class="contador-digito">
+<p class="contador-digito-numero" id="min3">0</p>
+<p class="contador-digito-texto">min</p>
+</div>
+<div class="contador-digito">
